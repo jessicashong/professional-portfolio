@@ -39,7 +39,7 @@ header {
     list-style-type: none;
     align-items: center;
 }
-li {
+.navbar li {
     text-align: center;
     margin: 30px;
     padding: 4px;
@@ -50,6 +50,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 36px;
 }
 
 
@@ -65,31 +66,43 @@ h1 {
     border-radius: 49%;
     background-color: var(--light1);
 }
-p {
+span {
     padding: 2%;
+    color: var(--dark2)
 }
 
 /* main project images section */
 h2 {
     color: var(--dark1);
+    font-size: 32px;
 }
-.main-project {
-    color: var(--dark1);
+.work {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    flex-direction: column;
+
+}
+.projects {
+    color: var(--dark1);
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
 }
 .work-card {
-    border: 2px solid var(--medium2) 
+    border: 2px solid var(--medium2);
+    width: 76%;
+    margin: 5px;
 }
 .project1 {
     position: relative;
+    display: flex;
+    justify-content: flex-end;
 }
 .text-block-main {
     position: absolute;
     bottom: 0;
-    margin: 0;
-    width: 100%;
+    margin: 6px;
+    width: 76%;
     background-color: var(--medium2);
     color: var(--dark2);
 }
@@ -110,7 +123,6 @@ h3, p {
     justify-content: flex-end;
 }
 .small-work-card {
-    /* margin: 2%; */
     position: relative;
     width: 25%;
     margin: 5px;
@@ -118,14 +130,15 @@ h3, p {
 .small-work-img {
     border: 2px solid var(--medium2);
     width: 100%;
-    margin: 10px;
+    /* margin: 10px; */
 }
 .text-block {
     position: absolute;
     bottom: 0;
-    margin: 10px;
+    margin: 0px;
     width: 100%;
     background-color: var(--medium2);
+    color: var(--dark2);
 }
 
 
@@ -137,15 +150,15 @@ h3, p {
     align-items: center;
 }
 .contact-li {
-    /* display: inline; */
     display: flex;
     justify-content: flex-end;
-    flex-direction: row;
+    padding: 2%;
 }
 /* .contact-ul {
-    margin-right: 28%;
+    display: flex; */
+    /* padding: 25px; */
     
-} */
+}
 
 
 /* resume */
