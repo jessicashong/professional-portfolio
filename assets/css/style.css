@@ -1,5 +1,6 @@
 :root {
-    --light: #eeede7;
+    --light1: #eeede7;
+    --light2: #d5d1c4;
     --medium1: #d2b1a7;
     --medium2: #959a5a;
     --dark1: #305852;
@@ -7,13 +8,20 @@
 
 }
 * {
-    background-color: var(--light);
     box-sizing: border-box;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    scroll-behavior: smooth;
 }
+
 body {
-    padding: 2%;
     margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: var(--light1);
+    padding: 20px;
 }
 
 /* header and navbar */
@@ -22,8 +30,9 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    padding: 0 20px;
     color: var(--dark1);
-    background-color: var();
+    background-color: var(--light2);
 }
 .navbar {
     display: flex;
@@ -32,8 +41,10 @@ header {
 }
 li {
     text-align: center;
-    padding: 10px;
-    width: 50%;
+    margin: 30px;
+    padding: 4px;
+    border: dashed var(--dark1) 2px;
+    font-size: 20px;
 }
 h1 {
     display: flex;
@@ -44,18 +55,21 @@ h1 {
 
 /* about me section */
 .about-me {
-    color: var(--dark1);
+    color: var(--dark2);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .avatar {
-    height: 60px;
+    border: solid 3px var(--dark2);
+    border-radius: 49%;
+    background-color: var(--light1);
 }
 p {
     padding: 2%;
 }
-/* project images section */
+
+/* main project images section */
 h2 {
     color: var(--dark1);
 }
@@ -63,18 +77,57 @@ h2 {
     color: var(--dark1);
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 .work-card {
-    width: 76%;
-    padding: 2%;
+    border: 2px solid var(--medium2) 
+}
+.project1 {
+    position: relative;
+}
+.text-block-main {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    background-color: var(--medium2);
+    color: var(--dark2);
+}
+figure {
+    display: flex;
+    flex-flow: column wrap;
+}
+h3, p {
+    background-color: var(--medium2);
+    padding: 2px;
+    margin: 0 5px;
+}
+
+/* small project images section */
+.small-project {
+    margin: 10px 0;
+    display: flex;
+    justify-content: flex-end;
 }
 .small-work-card {
-    max-width: 24%;
-    padding: 2%;
+    /* margin: 2%; */
+    position: relative;
+    width: 25%;
+    margin: 5px;
 }
-.small-project {
-    margin-left: 25%;
+.small-work-img {
+    border: 2px solid var(--medium2);
+    width: 100%;
+    margin: 10px;
 }
+.text-block {
+    position: absolute;
+    bottom: 0;
+    margin: 10px;
+    width: 100%;
+    background-color: var(--medium2);
+}
+
 
 
 /* contact me section */
@@ -84,11 +137,15 @@ h2 {
     align-items: center;
 }
 .contact-li {
-    display: inline;
+    /* display: inline; */
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
 }
-.contact-ul {
+/* .contact-ul {
     margin-right: 28%;
-}
+    
+} */
 
 
 /* resume */
@@ -106,13 +163,19 @@ a:visited, a:link {
 }
 a:hover {
     color: var(--medium1);
+    border: solid 3px var(--medium1);
+    padding: 4px;
+    font-style: italic;
 }
 
 /* footer */
 footer {
     color: var(--dark2);
+    background-color: var(--light2);
     text-align: center;
     font-size: 13px;
+    margin: 0;
+    padding: 8px;
 }
 
 /* media queries */
