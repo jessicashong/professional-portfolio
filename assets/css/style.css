@@ -52,6 +52,17 @@ h1 {
     align-items: center;
     font-size: 36px;
 }
+/* links */
+.navbar a:visited, a:link {
+    color: var(--dark1);
+    text-decoration: none;
+}
+.navbar a:hover {
+    color: var(--medium1);
+    border: solid 3px var(--medium1);
+    padding: 4px;
+    font-style: italic;
+}
 
 
 /* about me section */
@@ -78,37 +89,42 @@ h2 {
 }
 .work {
     display: flex;
-    flex-direction: column;
-
+    /* flex-direction: column; */
 }
 .projects {
-    color: var(--dark1);
-    /* width: 100%; */
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
 }
 .work-card {
     border: 2px solid var(--medium2);
-    width: 76%;
-    margin: 5px;
+    /* margin: 5px; */
+    width: 100%;
 }
 .project1 {
     position: relative;
     display: flex;
     justify-content: flex-end;
 }
+.project1. a {
+    position: relative;
+    margin-right: 5px;
+}
 .text-block-main {
     position: absolute;
-    bottom: 0;
-    margin: 6px;
-    width: 76%;
+    bottom: -7px;
+    width: 100%;
+    margin: 0;
     background-color: var(--medium2);
     color: var(--dark2);
 }
 figure {
     display: flex;
     flex-flow: column wrap;
+}
+.projects img:hover {
+    color: var(--medium1);
+    border: solid 3px var(--medium1);
+    font-style: italic;
 }
 h3, p {
     background-color: var(--medium2);
@@ -124,7 +140,7 @@ h3, p {
 }
 .small-work-card {
     position: relative;
-    width: 25%;
+    width: 20%;
     margin: 5px;
 }
 .small-work-img {
@@ -158,7 +174,7 @@ h3, p {
     display: flex; */
     /* padding: 25px; */
     
-}
+
 
 
 /* resume */
@@ -166,20 +182,8 @@ h3, p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 60%;
 }
 
-/* links */
-a:visited, a:link {
-    color: var(--dark1);
-    text-decoration: none;
-}
-a:hover {
-    color: var(--medium1);
-    border: solid 3px var(--medium1);
-    padding: 4px;
-    font-style: italic;
-}
 
 /* footer */
 footer {
@@ -207,11 +211,12 @@ footer {
   } */
   
   /* Large smartphones - navbar changes color */
-  /* @media screen and (max-width: 768px) {
-    nav {
-      background-color: #bb8588;
+  @media screen and (max-width: 768px) {
+    .small-work-card {
+        max-width: 40%;
+        flex-wrap: wrap;
     }
-  } */
+  }
   
   /* Small smartphones - image placeholders change color */
   /* @media screen and (max-width: 576px) {
