@@ -10,14 +10,12 @@
 * {
     box-sizing: border-box;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 
     scroll-behavior: smooth;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-}
 
 main {
     background-color: var(--light1);
@@ -70,7 +68,7 @@ h1 {
     color: var(--dark2);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    margin: 20px 0;
 }
 .avatar {
     border: solid 3px var(--dark2);
@@ -88,31 +86,37 @@ h2 {
     font-size: 32px;
 }
 .work {
+    margin: 20px 0;
     display: flex;
-    /* flex-direction: column; */
 }
 .projects {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+    flex: 1 0 75%;
 }
 .work-card {
-    border: 2px solid var(--medium2);
-    /* margin: 5px; */
-    width: 100%;
+    border: 3px solid var(--medium2);
 }
 .project1 {
     position: relative;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    background-image: url("/Users/jessica/Bootcamp/professional-portfolio/assets/images/jessicashong.github.io_prework-study-guide_.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:local;
+    width: 75%;
+    height: 395px;
 }
-.project1. a {
+.project1 a {
     position: relative;
     margin-right: 5px;
 }
 .text-block-main {
     position: absolute;
-    bottom: -7px;
-    width: 100%;
+    bottom: 30px;
+    width: 200px;
     margin: 0;
     background-color: var(--medium2);
     color: var(--dark2);
@@ -121,7 +125,11 @@ figure {
     display: flex;
     flex-flow: column wrap;
 }
-.projects img:hover {
+.project1 img {
+    width: 100%;
+    display: flex;
+}
+.work-card:hover, .small-work-img:hover {
     color: var(--medium1);
     border: solid 3px var(--medium1);
     font-style: italic;
@@ -136,23 +144,24 @@ h3, p {
 .small-project {
     margin: 10px 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 75%;
 }
 .small-work-card {
     position: relative;
-    width: 20%;
-    margin: 5px;
+    width: 24%;
 }
 .small-work-img {
-    border: 2px solid var(--medium2);
+    border: 3px solid var(--medium2);
     width: 100%;
     /* margin: 10px; */
 }
 .text-block {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     margin: 0px;
-    width: 100%;
+    width: 50%;
     background-color: var(--medium2);
     color: var(--dark2);
 }
@@ -164,15 +173,19 @@ h3, p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 20px 0;
 }
 .contact-li {
     display: flex;
     justify-content: flex-end;
     padding: 2%;
 }
-/* .contact-ul {
-    display: flex; */
-    /* padding: 25px; */
+.contact-li:hover, a:hover {
+    color: var(--medium1);
+}
+.contact-li a:visited, a:link{
+    color: var(--dark2);
+}
     
 
 
@@ -182,6 +195,7 @@ h3, p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 20px 0;
 }
 
 
@@ -195,33 +209,58 @@ footer {
     padding: 8px;
 }
 
-/* media queries */
+/* media queries
 
-@media screen {
-    
-}
-
-/* When using `max-width` as the breakpoint, you must go from widest to narrowest to avoid conflict */
-
-/* Tablets - header changes color */
-/* @media screen and (max-width: 992px) {
-    header {
-      background: #772014;
+992px screen size */
+  @media screen and (max-width: 992px) {
+    .avatar{
+        width: 50%;
     }
-  } */
-  
-  /* Large smartphones - navbar changes color */
-  @media screen and (max-width: 768px) {
-    .small-work-card {
-        max-width: 40%;
+    .project1 {
+        max-height: 350px;
+        background-image: url("/Users/jessica/Bootcamp/professional-portfolio/assets/images/jessicashong.github.io_prework-study-guide_.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-attachment:local;
+    }
+    .small-project {
+        display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
+        width: 75%; 
+    }
+    .small-work-card{
+        width: 50%;
+    }
+    .text-block, .text-block-main{
+        display: flex;
+        flex: 1 0 auto;
     }
   }
-  
-  /* Small smartphones - image placeholders change color */
-  /* @media screen and (max-width: 576px) {
-    .sample-img {
-      background-color: #8ac4ff;
+
+/* 767 screen size */
+  @media screen and (max-width: 768px) {
+    .avatar{
+        width: 25%;
+    }
+    .project1 {
+        max-height: 250px;
+        background-image: url("/Users/jessica/Bootcamp/professional-portfolio/assets/images/jessicashong.github.io_prework-study-guide_.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-attachment:local;
+    }
+    .small-project {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 75%; 
+    }
+    .small-work-card{
+        width: 50%;
+    }
+    .text-block, .text-block-main{
+        display: flex;
+        flex: 1 0 auto;
     }
   }
-   */
