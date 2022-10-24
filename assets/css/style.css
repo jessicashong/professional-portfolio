@@ -102,7 +102,7 @@ h2 {
     position: relative;
     display: flex;
     justify-content: space-between;
-    background-image: url("professional-portfolio/assets/images/jessicashong.github.io_prework-study-guide_.jpg");
+    background-image: url("../assets/images/jessicashong.github.io_prework-study-guide_.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment:local;
