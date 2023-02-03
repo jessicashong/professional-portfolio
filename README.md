@@ -5,7 +5,7 @@ This website is a portfolio platform for Jessica Hong including short bio, proje
 
 ## Visual Presentation
 
-![screenshot of Portfolio](./assets/images/professional-portfolio_index.html.jpg)
+![screenshot of Portfolio](./assets/images/portfolio.png)
 
 
 ## Links
